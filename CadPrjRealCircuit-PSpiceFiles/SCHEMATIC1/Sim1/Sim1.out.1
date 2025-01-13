@@ -1,0 +1,77 @@
+
+**** 05/30/24 12:30:07 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim1"  [ c:\users\paulv\desktop\cadproiectbun\cadprjrealcircuit-pspicefiles\schematic1\sim1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Sim1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\paulv\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM rs 10k 80k 100 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+**** Param: RUNFOR = 0
+
+ERROR(ORPSIM-15347): Cannot open input file c:\users\paulv\desktop\cadproiectbun\cadprjrealcircuit-PSpiceFiles\SCHEMATIC1\SCHEMATIC1.net.
+
+
+ABORTING SIMULATION
+**** 05/30/24 12:30:07 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim1"  [ c:\users\paulv\desktop\cadproiectbun\cadprjrealcircuit-pspicefiles\schematic1\sim1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           1
+  External (NCNODS)                 =           1
+  Total (NUMNOD)                    =           0
+
+Total device count (NUMEL)          =           0
+
+Number of subcircuits (X)           =           0
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Readin                            =        0.00
+  General setup                     =        0.00
+  CMI setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =         .05
+  Total job time                    =         .80
+

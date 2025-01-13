@@ -1,0 +1,82 @@
+
+**** 05/23/24 19:07:11 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Performance"  [ C:\Users\paulv\Desktop\CadPrjRealCircuit-PSpiceFiles\SCHEMATIC1\Performance.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Performance.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\paulv\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM rs 10k 80k 100 
+.MC 10 DC output YMAX OUTPUT ALL 
+----------$
+ERROR(ORPSIM-16296): Invalid Expression: Specify either current(I) or voltage(V).
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CADPRJREALCIRCUIT
+R_R1         N13625 0  {rs} TC=0,0 
+R_R8         N13575 COMPOUT R_R8 15.8k TC=0,0 
+.model        R_R8 RES R=1 DEV=1% TC1=0 TC2=0
+Q_Q1         VCC N13921 OUTPUT Q2N2222
+R_R4         VCC N13377 R_R4 1.69k TC=0,0 
+.model        R_R4 RES R=1 DEV=1% TC1=0 TC2=0
+X_U3         N13575 N13961 VCC 0 COMPOUT AD8614/AD
+V_V1         VCC 0 16Vdc
+R_R14         VCC N14243 R_R14 2.21k TC=0,0 
+.model        R_R14 RES R=1 DEV=1% TC1=0 TC2=0
+X_U1         N13625 VCD VCC 0 VCD AD8614/AD
+R_R6         N13899 DCOUT R_R6 12.1k TC=0,0 
+.model        R_R6 RES R=1 DEV=1% TC1=0 TC2=0
+R_R7         N13469 N13695 R_R7 4.12k TC=0,0 
+.model        R_R7 RES R=1 DEV=1% TC1=0 TC2=0
+R_R3         VCD N13899 R_R3 6.19k TC=0,0 
+.model        R_R3 RES R=1 DEV=1% TC1=0 TC2=0
+X_U5         N13377 N13469 VCC 0 N13469 AD8614/AD
+R_R15         N14243 0 R_R15 1k TC=0,0 
+.model        R_R15 RES R=1 DEV=1% TC1=0 TC2=0
+R_Relay         0 OUTPUT  55 TC=0,0 
+R_R2         VCC N13625 R_R2 80.6k TC=0,0 
+.model        R_R2 RES R=1 DEV=1% TC1=0 TC2=0
+R_R13         N140491 OUTPUT R_R13 249 TC=0,0 
+.model        R_R13 RES R=1 DEV=1% TC1=0 TC2=0
+X_U4         N14243 N14347 VCC 0 N14347 AD8614/AD
+R_R17         DCOUT N13575 R_R17 7.5k TC=0,0 
+.model        R_R17 RES R=1 DEV=1% TC1=0 TC2=0
+X_D1         N140491 0 D1N5765
+R_R18         VCC N14175 R_R18 10k TC=0,0 
+.model        R_R18 RES R=1 DEV=1% TC1=0 TC2=0
+R_R16         COMPOUT N13921 R_R16 5.36k TC=0,0 
+.model        R_R16 RES R=1 DEV=1% TC1=0 TC2=0
+R_R19         N14175 0 R_R19 14.7k TC=0,0 
+.model        R_R19 RES R=1 DEV=1% TC1=0 TC2=0
+R_R5         0 N13377 R_R5 1k TC=0,0 
+.model        R_R5 RES R=1 DEV=1% TC1=0 TC2=0
+X_U2         N13695 N13899 VCC 0 DCOUT AD8614/AD
+X_U6         N14175 N13961 VCC 0 N13961 AD8614/AD
+R_R20         N14347 OUTPUT R_R20 49.9k TC=0,0 
+.model        R_R20 RES R=1 DEV=1% TC1=0 TC2=0
+.PARAM  rs=10k
+
+**** RESUMING Performance.cir ****
+.END
+

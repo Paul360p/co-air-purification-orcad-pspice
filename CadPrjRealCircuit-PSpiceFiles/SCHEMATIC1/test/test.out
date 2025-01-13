@@ -1,0 +1,476 @@
+
+**** 05/26/24 20:19:01 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\paulv\Desktop\cadproiectbun\CadPrjRealCircuit-PSpiceFiles\SCHEMATIC1\test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\paulv\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CADPRJREALCIRCUIT
+R_R1         N13625 0  {rs} TC=0,0 
+R_R8         N13575 COMPOUT R_R8 15.8k TC=0,0 
+.model        R_R8 RES R=1 DEV=1% TC1=0 TC2=0
+Q_Q1         VCC N13921 N17056 Q2N2222
+R_R4         VCC N13377 R_R4 1.69k TC=0,0 
+.model        R_R4 RES R=1 DEV=1% TC1=0 TC2=0
+X_U3         N13575 N13961 VCC 0 COMPOUT AD8614/AD
+V_V1         VCC 0 16Vdc
+X_U1         N13625 VCD VCC 0 VCD AD8614/AD
+R_R6         N13899 DCOUT R_R6 12.1k TC=0,0 
+.model        R_R6 RES R=1 DEV=1% TC1=0 TC2=0
+R_R7         N13377 N13695 R_R7 4.12k TC=0,0 
+.model        R_R7 RES R=1 DEV=1% TC1=0 TC2=0
+R_R3         VCD N13899 R_R3 6.19k TC=0,0 
+.model        R_R3 RES R=1 DEV=1% TC1=0 TC2=0
+R_Relay         0 N19308  55 TC=0,0 
+R_R2         VCC N13625 R_R2 80.6k TC=0,0 
+.model        R_R2 RES R=1 DEV=1% TC1=0 TC2=0
+R_R13         N140491 N17056 R_R13 0.5k TC=0,0 
+.model        R_R13 RES R=1 DEV=1% TC1=0 TC2=0
+R_R17         DCOUT N13575 R_R17 7.5k TC=0,0 
+.model        R_R17 RES R=1 DEV=1% TC1=0 TC2=0
+X_D1         N140491 0 D1N5765
+R_R18         VCC N13961 R_R18 10k TC=0,0 
+.model        R_R18 RES R=1 DEV=1% TC1=0 TC2=0
+R_R16         COMPOUT N13921 R_R16 5.36k TC=0,0 
+.model        R_R16 RES R=1 DEV=1% TC1=0 TC2=0
+R_R19         N13961 0 R_R19 14.7k TC=0,0 
+.model        R_R19 RES R=1 DEV=1% TC1=0 TC2=0
+R_R5         0 N13377 R_R5 1k TC=0,0 
+.model        R_R5 RES R=1 DEV=1% TC1=0 TC2=0
+X_U2         N13695 N13899 VCC 0 DCOUT AD8614/AD
+X_U4         N19372 N19308 VCC 0 N19308 AD8614/AD
+R_R20         N17056 N19372  2k TC=0,0 
+R_R21         N19372 0  1k TC=0,0 
+.PARAM  rs=10k
+
+**** RESUMING test.cir ****
+.END
+
+**** 05/26/24 20:19:01 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\paulv\Desktop\cadproiectbun\CadPrjRealCircuit-PSpiceFiles\SCHEMATIC1\test.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.DX         X_U1.DX         X_D1.DLOW       X_D1.DHIGH      
+          IS  100.000000E-18  100.000000E-18    1.000000E-15    9.000000E-15 
+           N                                    2.15            1.2          
+          BV                                    5              99.999000E+12 
+         IBV                                  100.000000E-06    1.000000E-03 
+          RS    5               5             100                .3          
+          TT                                   10.000000E-09                 
+         CJO                                   82.852370E-12                 
+          VJ                                    1.207694                     
+           M                                     .405311                     
+          FC                                     .434001                     
+          EG                                    1.664            .1          
+         XTI                                   10.78           -3.84         
+
+
+               X_U2.DX         X_U4.DX         
+          IS  100.000000E-18  100.000000E-18 
+          RS    5               5            
+
+
+**** 05/26/24 20:19:01 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\paulv\Desktop\cadproiectbun\CadPrjRealCircuit-PSpiceFiles\SCHEMATIC1\test.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N2222         X_U3.NIX        X_U3.PIX        X_U3.POUT       
+               NPN             NPN             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS   14.340000E-15  100.000000E-18  100.000000E-18  100.000000E-18 
+          BF  255.9           220             220             100            
+          NF    1               1               1               1            
+         VAF   74.03          130             130             200            
+         IKF     .2847                                                       
+         ISE   14.340000E-15                                                 
+          NE    1.307                                                        
+          BR    6.092           1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RB   10                                                            
+          RE    0               0               0               0            
+          RC    1               0               0               4            
+         CJE   22.010000E-12    0               0               0            
+         VJE     .75             .75             .75             .75         
+         MJE     .377                                                        
+         CJC    7.306000E-12    0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .3416           .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  411.100000E-12                                                 
+         XTF    3                                                            
+         VTF    1.7                                                          
+         ITF     .6                                                          
+          TR   46.910000E-09                                                 
+         XTB    1.5                                                          
+          KF    0              25.000000E-15   25.000000E-15    0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.2             2.2          
+           D     .87             .87             .52             .52         
+
+
+               X_U3.NOUT       X_U1.NIX        X_U1.PIX        X_U1.POUT       
+               NPN             NPN             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  100.000000E-18  100.000000E-18  100.000000E-18  100.000000E-18 
+          BF  100             220             220             100            
+          NF    1               1               1               1            
+         VAF  200             130             130             200            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    4               0               0               4            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0              25.000000E-15   25.000000E-15    0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.2             2.2          
+           D     .87             .87             .52             .52         
+
+
+               X_U1.NOUT       X_U2.NIX        X_U2.PIX        X_U2.POUT       
+               NPN             NPN             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  100.000000E-18  100.000000E-18  100.000000E-18  100.000000E-18 
+          BF  100             220             220             100            
+          NF    1               1               1               1            
+         VAF  200             130             130             200            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    4               0               0               4            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0              25.000000E-15   25.000000E-15    0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.2             2.2          
+           D     .87             .87             .52             .52         
+
+
+               X_U2.NOUT       X_U4.NIX        X_U4.PIX        X_U4.POUT       
+               NPN             NPN             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  100.000000E-18  100.000000E-18  100.000000E-18  100.000000E-18 
+          BF  100             220             220             100            
+          NF    1               1               1               1            
+         VAF  200             130             130             200            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    4               0               0               4            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0              25.000000E-15   25.000000E-15    0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.2             2.2          
+           D     .87             .87             .52             .52         
+
+
+               X_U4.NOUT       
+               NPN             
+       LEVEL    1            
+          IS  100.000000E-18 
+          BF  100            
+          NF    1            
+         VAF  200            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    4            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 05/26/24 20:19:01 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\paulv\Desktop\cadproiectbun\CadPrjRealCircuit-PSpiceFiles\SCHEMATIC1\test.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R8            R_R4            R_R6            R_R7            
+           R    1               1               1               1            
+
+
+               R_R3            R_R2            R_R13           R_R17           
+           R    1               1               1               1            
+
+
+               R_R18           R_R16           R_R19           R_R5            
+           R    1               1               1               1            
+
+
+**** 05/26/24 20:19:01 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\paulv\Desktop\cadproiectbun\CadPrjRealCircuit-PSpiceFiles\SCHEMATIC1\test.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   16.0000  (  VCD)    1.7679  (DCOUT)   14.1220  (N13377)    5.9480     
+
+(N13575)   14.7130 (N13625)    1.7669 (N13695)    5.9481 (N13899)    5.9491     
+
+(N13921)   15.0730 (N13961)    9.5301 (N17056)   14.3360 (N19308)    4.7794     
+
+(N19372)    4.7786 (X_D1.4)     .7025 (X_U1.3)    2.4946 (X_U1.4)    2.4946     
+
+(X_U1.5)     .3726 (X_U1.6)     .3726 (X_U1.7)    1.7679 (X_U1.8)   15.3000     
+
+(X_U1.9)   15.3000 (X_U2.3)    6.6744 (X_U2.4)    6.6744 (X_U2.5)     .3640     
+
+(X_U2.6)     .3640 (X_U2.7)    5.9491 (X_U2.8)   15.3000 (X_U2.9)   15.3000     
+
+(X_U3.3)   10.4640 (X_U3.4)   10.2720 (X_U3.5) 60.90E-09 (X_U3.6)     .7129     
+
+(X_U3.7)   14.7140 (X_U3.8)   15.3000 (X_U3.9)   15.3000 (X_U4.3)    5.5053     
+
+(X_U4.4)    5.5052 (X_U4.5)     .3662 (X_U4.6)     .3666 (X_U4.7)    4.7796     
+
+(X_U4.8)   15.3000 (X_U4.9)   15.3000 (COMPOUT)   15.9810                       
+
+(N140491)    1.5988                   (X_U1.10)    2.5951                       
+
+(X_U1.11)   15.6530                   (X_U1.12)   15.6530                       
+
+(X_U1.13)    1.0453                   (X_U1.14)    1.0453                       
+
+(X_U1.15)     .9518                   (X_U1.16)     .7000                       
+
+(X_U1.17)     .7000                   (X_U1.30)    8.0549                       
+
+(X_U1.40)   15.3420                   (X_U1.41)   15.3420                       
+
+(X_U1.42)     .7678                   (X_U1.43)     .7644                       
+
+(X_U1.46)   15.8420                   (X_U1.47)     .5000                       
+
+(X_U1.51)    0.0000                   (X_U1.70)    0.0000                       
+
+(X_U1.71)    0.0000                   (X_U1.72)    8.0000                       
+
+(X_U1.73)    8.0000                   (X_U1.80)    8.0000                       
+
+(X_U1.81)    8.0000                   (X_U1.97)   16.0000                       
+
+(X_U1.98)    8.0000                   (X_U2.10)    6.7725                       
+
+(X_U2.11)   15.6440                   (X_U2.12)   15.6440                       
+
+(X_U2.13)    5.2251                   (X_U2.14)    5.2251                       
+
+(X_U2.15)    5.1293                   (X_U2.16)     .7000                       
+
+(X_U2.17)     .7000                   (X_U2.30)    7.9486                       
+
+(X_U2.40)   15.2360                   (X_U2.41)   15.2390                       
+
+(X_U2.42)     .6615                   (X_U2.43)     .6614                       
+
+(X_U2.46)   15.7390                   (X_U2.47)     .5000                       
+
+(X_U2.51)    0.0000                   (X_U2.70)    0.0000                       
+
+(X_U2.71)    0.0000                   (X_U2.72)    8.0000                       
+
+(X_U2.73)    8.0000                   (X_U2.80)    8.0000                       
+
+(X_U2.81)    8.0000                   (X_U2.97)   16.0000                       
+
+(X_U2.98)    8.0000                   (X_U3.10)   10.4640                       
+
+(X_U3.11)   15.2530                   (X_U3.12)   16.0000                       
+
+(X_U3.13)   13.9690                   (X_U3.14)   13.7670                       
+
+(X_U3.15)   13.7670                   (X_U3.16)     .7000                       
+
+(X_U3.17)     .7000                   (X_U3.30)    -.7559                       
+
+(X_U3.40)    6.5312                   (X_U3.41)   15.1350                       
+
+(X_U3.42)   -8.0430                   (X_U3.43)    -.4209                       
+
+(X_U3.46)   15.6350                   (X_U3.47)     .5000                       
+
+(X_U3.51)    0.0000                   (X_U3.70)    0.0000                       
+
+(X_U3.71)    0.0000                   (X_U3.72)    8.0000                       
+
+(X_U3.73)    8.0000                   (X_U3.80)    8.0000                       
+
+(X_U3.81)    8.0000                   (X_U3.97)   16.0000                       
+
+(X_U3.98)    8.0000                   (X_U4.10)    5.6040                       
+
+(X_U4.11)   15.6470                   (X_U4.12)   15.6470                       
+
+(X_U4.13)    4.0560                   (X_U4.14)    4.0559                       
+
+(X_U4.15)    3.9607                   (X_U4.16)     .7000                       
+
+(X_U4.17)     .7000                   (X_U4.30)    7.4106                       
+
+(X_U4.40)   14.6980                   (X_U4.41)   15.1120                       
+
+(X_U4.42)     .1235                   (X_U4.43)     .1235                       
+
+(X_U4.46)   15.6120                   (X_U4.47)     .5000                       
+
+(X_U4.51)    0.0000                   (X_U4.70)    0.0000                       
+
+(X_U4.71)    0.0000                   (X_U4.72)    8.0000                       
+
+(X_U4.73)    8.0000                   (X_U4.80)    8.0000                       
+
+(X_U4.81)    8.0000                   (X_U4.97)   16.0000                       
+
+(X_U4.98)    8.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.276E-01
+    X_U3.V1      4.836E-12
+    X_U3.V2      5.028E-12
+    X_U3.V3      1.327E-11
+    X_U3.V4      1.307E-11
+    X_U3.VN1     0.000E+00
+    X_U3.V5      3.655E-13
+    X_U3.V6     -1.524E-02
+    X_U1.V1      1.281E-11
+    X_U1.V2      1.281E-11
+    X_U1.V3      3.454E-13
+    X_U1.V4      3.454E-13
+    X_U1.VN1     0.000E+00
+    X_U1.V5      1.581E-13
+    X_U1.V6      2.645E-13
+    X_U2.V1      8.626E-12
+    X_U2.V2      8.626E-12
+    X_U2.V3      4.525E-12
+    X_U2.V4      4.525E-12
+    X_U2.VN1     0.000E+00
+    X_U2.V5      2.613E-13
+    X_U2.V6      1.615E-13
+    X_U4.V1      9.795E-12
+    X_U4.V2      9.795E-12
+    X_U4.V3      3.356E-12
+    X_U4.V4      3.356E-12
+    X_U4.VN1     0.000E+00
+    X_U4.V5      3.886E-13
+    X_U4.V6     -2.099E-10
+
+    TOTAL POWER DISSIPATION   2.05E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/26/24 20:19:01 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\paulv\Desktop\cadproiectbun\CadPrjRealCircuit-PSpiceFiles\SCHEMATIC1\test.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .13
+
